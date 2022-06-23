@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="MedidoresSmartWeb.Principal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="container-fluid bg-dark text-white">
+            <h1>MedidoresSmart</h1>
+            <div class="mt-5">
+                
+                <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="2" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" RenderingMode="Table" Width="3px"></asp:Menu>
+
+                <asp:SiteMapDataSource runat="server" ID="SiteMapDataSource1"></asp:SiteMapDataSource>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                    <CurrentNodeStyle ForeColor="#333333"></CurrentNodeStyle>
+
+                    <NodeStyle Font-Bold="True" ForeColor="#284E98"></NodeStyle>
+
+                    <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1"></PathSeparatorStyle>
+
+                    <RootNodeStyle Font-Bold="True" ForeColor="#507CD1"></RootNodeStyle>
+                </asp:SiteMapPath>
+            </div>
+
+        </header>
+        <div class="container-fluid mt-5">
+            <asp:ContentPlaceHolder ID="Contenido" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
